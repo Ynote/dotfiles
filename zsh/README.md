@@ -9,6 +9,7 @@ Enter the new value, or press return for the default
 ```
 
 *(You may need to remove `.oh-my-zsh` and `.zshrc` before creating the symlinks)*
+
 Create a symlink .oh-my-zsh -> dotfiles/zsh/.oh-my-zsh
 ```
 $ ln -s ~/dotfiles/zsh/.oh-my-zsh ~/.oh-my-zsh
