@@ -8,11 +8,11 @@ Enter the new value, or press return for the default
     Login Shell [/bin/bash]:/bin/zsh
 ```
 
-*(You may need to remove `.oh-my-zsh` and `.zshrc` before creating the symlinks)*
+*(You may need to remove `.oh-my-zsh/custom` and `.zshrc` before creating the symlinks)*
 
-Create a symlink .oh-my-zsh -> dotfiles/zsh/.oh-my-zsh
+Create a symlink .oh-my-zsh/custom -> dotfiles/zsh/.oh-my-zsh/custom
 ```
-$ ln -s ~/dotfiles/zsh/.oh-my-zsh ~/.oh-my-zsh
+$ ln -s ~/dotfiles/zsh/.oh-my-zsh/custom ~/.oh-my-zsh/custom
 ```
 
 Create a symlink .zshrc -> dotfiles/zsh/.zshrc
