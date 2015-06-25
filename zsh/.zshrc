@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/fanny/.oh-my-zsh
 
+# Term color
+export TERM=screen-256color-bce
+
 # Theme
 ZSH_THEME="ys"
 
