@@ -29,7 +29,7 @@ Launch `vim` and run `:PluginInstall` to install plugins and bundles of the .vim
 if you just install Vimproc plugin, you will need to compile it to use it with Unite.
 
 ```
-$ cd ~/dotfiles/vim/bundle/
+$ cd ~/dotfiles/vim/bundle/vimproc.vim
 $ make
 ```
 
