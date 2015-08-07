@@ -1,4 +1,8 @@
 # Vim
 vim/backup
 vim/bundle
+vim/swap
 vim/.netrwhist
+
+# Bin
+bin/variables.sh
