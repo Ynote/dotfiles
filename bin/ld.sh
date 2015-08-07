@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ~/scripts/variables.sh
+source ~/bin/variables.sh
 
 case "$1" in
 'start')
