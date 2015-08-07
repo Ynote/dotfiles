@@ -8,3 +8,7 @@ This is my personal setup.
 * [Zsh](http://www.zsh.org/) (v4.3.9 or more recent)
 * [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [Tmux](http://doc.ubuntu-fr.org/tmux)
+
+## Setup
+
+Create a `.aliases` file in your home.
