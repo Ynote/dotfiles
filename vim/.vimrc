@@ -111,9 +111,9 @@ set smartindent                                               " Smart indent
 "set nowrap                                                    " No wrap lines
 
 " Tabs
-set softtabstop=4                                             " Largeur d'une tabulation
-set tabstop=4                                                 " Largeur d'une tabulation
-set shiftwidth=4                                              " Largeur de l'indentation
+set softtabstop=2                                             " Largeur d'une tabulation
+set tabstop=2                                                 " Largeur d'une tabulation
+set shiftwidth=2                                              " Largeur de l'indentation
 set expandtab                                                 " Utilise des espaces plutot que le caractere tabulation
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -226,6 +226,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'othree/html5.vim'
 Plugin 'evidens/vim-twig'
+Plugin 'digitaltoad/vim-jade'
 
 
 " vim-scripts repos
