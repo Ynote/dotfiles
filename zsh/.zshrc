@@ -15,6 +15,15 @@ plugins=(git colored-man colorize node npm gem ruby rvm command-not-found tmux)
 
 # User configuration
 export PATH="$HOME/bin:$PATH"
+export RBENV_VERSION=2.1.3
+eval "$(rbenv init -)"
+
+# Aliases
+if [ -f ~/.zshaliases ]; then
+    source ~/.zshaliases
+else
+    echo 'File not found: ~/.zshaliases'
+fi
 
 source $ZSH/oh-my-zsh.sh
 
