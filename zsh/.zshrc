@@ -4,6 +4,9 @@ export ZSH=~/.oh-my-zsh
 # Term color
 export TERM=screen-256color-bce
 
+# Editor
+export EDITOR=vim
+
 # Theme
 ZSH_THEME="ys"
 
@@ -25,5 +28,8 @@ else
     echo 'File not found: ~/.zshaliases'
 fi
 
+# ZSH conf
 source $ZSH/oh-my-zsh.sh
 
+# Tmux autocompletion
+source ~/bin/tmuxinator.zsh
