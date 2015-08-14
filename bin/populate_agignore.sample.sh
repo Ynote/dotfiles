@@ -10,4 +10,4 @@ AG_IGNORE_FILE=.agignore
 # You can put as many as you like, separated by a pipe.
 WHITE_LIST='directory_1|directory_2|directory_3'
 
-ls -1 $APP_DIR | grep --color=never -v -P "($WHITE_LIST)" > ~/$AG_IGNORE_FILE
+ls -1 $APP_DIR | grep --color=never -v "($WHITE_LIST)" > ~/$AG_IGNORE_FILE
