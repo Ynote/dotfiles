@@ -1,0 +1,44 @@
+# ~/.tmuxinator/work.yml
+
+name: work
+root: ~/
+
+pre:
+  - ~/bin/ld stop
+  - ~/bin/ld start
+startup_window: kisskissbankbank
+windows:
+  - kkbb-modules:
+      root: ~/web/kkbb-modules
+      panes:
+        -
+  - kkbb-lendopolis-client:
+      root: ~/web/kkbb-lendopolis-clients/front
+      panes:
+        -
+  - kkbb-lendopolis-dashboard:
+      root: ~/web/kkbb-lendopolis-clients/dashboard
+      panes:
+        -
+  - kkbb-lendopolis:
+      root: ~/web/kkbb-lendopolis
+      panes:
+        -
+  - kkbb-core:
+      root: ~/web/kkbb-core
+      panes:
+        -
+  - logs-client:
+      layout: tiled
+      panes:
+        - tail -f ~/web/logs/kkbb-lendopolis-grunt.log
+        - tail -f ~/web/logs/kkbb-lendopolis-rails.log
+        - tail -f ~/web/logs/kkbb-lendopolis-dashboard-grunt.log
+  - kisskissbankbank:
+      root: ~/web/kisskissbankbank
+      panes:
+        -
+  - kisskissbankbank-log:
+      root: ~/web/kisskissbankbank
+      panes:
+        - bundle exec rails s -p 3004
