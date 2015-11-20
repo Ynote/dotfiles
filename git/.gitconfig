@@ -22,6 +22,7 @@
   gr = log --pretty=oneline --abbrev-commit --decorate --graph
   dl = "!git ll -1"
   dlc = diff --cached HEAD^
+  cd = diff --cached
   f = "!git ls-files | grep -i"
 
 [color]
@@ -33,3 +34,5 @@
 
 [merge]
   summary = true
+[push]
+	default = simple
