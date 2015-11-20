@@ -14,6 +14,7 @@
 
 filetype plugin on
 au BufRead,BufNewFile *.html setfiletype html.twig
+au BufRead,BufNewFile *.html.arb setfiletype ruby
 set nocompatible                                              " Makes vim behave in a more useful way than vi
 set number                                                    " Line numbers
 set ttyfast                                                   " Improve drawing
@@ -111,10 +112,20 @@ set smartindent                                               " Smart indent
 "set nowrap                                                    " No wrap lines
 
 " Tabs
-set softtabstop=2                                             " Largeur d'une tabulation
-set tabstop=2                                                 " Largeur d'une tabulation
-set shiftwidth=2                                              " Largeur de l'indentation
-set expandtab                                                 " Utilise des espaces plutot que le caractere tabulation
+set softtabstop=2                                             " Tab width
+set tabstop=2                                                 " Tab width
+set shiftwidth=2                                              " Indent width
+set expandtab                                                 " Use whitespace instead of tab
+
+" Columns
+set tw=80
+set formatoptions+=t
+
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs and buffers
