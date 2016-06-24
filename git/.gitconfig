@@ -24,6 +24,7 @@
   dlc = diff --cached HEAD^
   cd = diff --cached
   f = "!git ls-files | grep -i"
+  fa = "!git diff --name-status origin/development | grep ^A"
 
 [color]
   ui = auto
