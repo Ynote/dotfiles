@@ -16,10 +16,13 @@ DISABLE_AUTO_TITLE="true"
  # Plugins
 plugins=(git colored-man colorize node npm gem ruby rvm command-not-found tmux)
 
-# User configuration
+# Local configuration
 export PATH="$HOME/bin:$PATH"
-export RBENV_VERSION=2.1.3
-eval "$(rbenv init -)"
+if [ -f ~/.zshlocal ]; then
+    source ~/.zshlocal
+else
+    echo 'File not found: ~/.zshlocal'
+fi
 
 # Aliases
 if [ -f ~/.zshaliases ]; then
