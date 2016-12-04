@@ -238,7 +238,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'othree/html5.vim'
 Plugin 'evidens/vim-twig'
 Plugin 'digitaltoad/vim-jade'
-
+Plugin 'flowtype/vim-flow'
 
 " vim-scripts repos
 Plugin 'L9'
