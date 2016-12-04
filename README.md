@@ -11,4 +11,6 @@ This is my personal setup.
 
 ## Setup
 
-Create a `.aliases` file in your home.
+- Create a `.zshaliases` file in your home for all your aliases.
+- Create a `.zshlocal` file in your home for all your local configuration
+  (environment variables, custom triggers, etc.).
