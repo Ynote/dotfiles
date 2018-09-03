@@ -6,3 +6,4 @@ vim/.netrwhist
 
 # Bin
 bin/variables.sh
+bin/populate_agignore.sh
