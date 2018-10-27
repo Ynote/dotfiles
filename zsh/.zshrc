@@ -59,13 +59,9 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # Rbenv config
-export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/versions/2.3.4/bin/:$PATH"
 eval "$(rbenv init -)"
 
 # NVM config
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 load-nvmrc() {
   local node_version="$(nvm version)"
   local nvmrc_path="$(nvm_find_nvmrc)"
