@@ -1,14 +1,17 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+# Theme
+ZSH_THEME="ys"
+
+# Enable zsh hooks
+autoload -U add-zsh-hook
+
 # Term color
 export TERM=screen-256color-bce
 
 # Editor
 export EDITOR=vim
-
-# Theme
-ZSH_THEME="ys"
 
 # Disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
@@ -55,11 +58,14 @@ fi
 # ZSH conf
 source $ZSH/oh-my-zsh.sh
 
-# Load nvm
+# Rbenv config
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/versions/2.3.4/bin/:$PATH"
+eval "$(rbenv init -)"
+
+# NVM config
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
-autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
   local nvmrc_path="$(nvm_find_nvmrc)"
@@ -73,27 +79,23 @@ load-nvmrc() {
       nvm use
     fi
   elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
+    echo "Reverting to nvm stable version"
+    nvm use stable
   fi
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-# Add MySQL 5.6's mysql
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 
 # Tmux autocompletion
 source ~/dotfiles/bin/tmuxinator.zsh
 
-# Helps rmagick find imagemagick 6's pkgconfig on gem install
-export PKG_CONFIG_PATH=/usr/local/opt/imagemagick@6/lib/pkgconfig
-
-eval "$(rbenv init -)"
-
+# iTerm2 integration for macOS
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+########################################################################
+#####    PLEASE consider to use ~/.zshlocal to add local config    #####
+########################################################################
