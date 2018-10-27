@@ -25,8 +25,7 @@ $ mkdir backup swap
 | `Ctrl` + `n` | Open the current directory tree |
 | `,` + `a` + `=` | Align all the `=` character in the selection |
 | `,` + `a` + `:` | Align all the `,` character in the selection |
-| `,` + `g` + `space` | Grep the selection and opens a pane with the grep
-result |
+| `,` + `g` + `space` | Grep the selection and opens a pane with the grep result |
 | `,` + `f` | Search a file by name in the current directory |
 
 ### Understanding `.vimrc`
@@ -52,7 +51,7 @@ Launch `vim` and run `:VundleInstall!` to install plugins and bundles of the
 `.vimrc`.
 
 
-## Unite
+## Unite plugin
 
 ### Compile Vimproc
 
