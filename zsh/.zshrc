@@ -96,6 +96,6 @@ source ~/dotfiles/bin/tmuxinator.zsh
 # iTerm2 integration for macOS
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-########################################################################
-#####    PLEASE consider to use ~/.zshlocal to add local config    #####
-########################################################################
+############################################################################
+#####    PLEASE consider using ~/.zshlocal to add your local config    #####
+############################################################################
