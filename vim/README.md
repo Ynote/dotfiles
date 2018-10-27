@@ -16,7 +16,30 @@ $ cd ~/dotfiles/vim
 $ mkdir backup swap
 ```
 
-## Bundle
+## Custom cheat sheet
+
+### Commands
+
+| Commands | Description |
+|----------|-------------|
+| `Ctrl` + `n` | Open the current directory tree |
+| `,` + `a` + `=` | Align all the `=` character in the selection |
+| `,` + `a` + `:` | Align all the `,` character in the selection |
+| `,` + `g` + `space` | Grep the selection and opens a pane with the grep
+result |
+| `,` + `f` | Search a file by name in the current directory |
+
+### Understanding `.vimrc`
+
+- `<C-n>` means to use the key `Ctrl` and then, the key `n`
+- `<Leader>` means to use `,`.
+- `let g:foo = 'bar'` means setting `bar` to `foo` as a global variable.
+- `map` is used to map a key in general.
+- `nmap` is used to map a key in normal mode.
+- `imap` is used to map a key in insert mode.
+- `vmap` is used to map a key in visual mode.
+
+## Plugins
 
 Use [Vundle](https://github.com/gmarik/Vundle.vim) to install bundles and
 plugins
@@ -25,10 +48,13 @@ plugins
 $  git clone https://github.com/gmarik/Vundle.vim.git ~/dotfiles/vim/bundle/Vundle.vim
 ```
 
-Launch `vim` and run `:PluginInstall` to install plugins and bundles of the
+Launch `vim` and run `:VundleInstall!` to install plugins and bundles of the
 `.vimrc`.
 
-## Setup Unite
+
+## Unite
+
+### Compile Vimproc
 
 If you just install Vimproc plugin, you will need to compile it to use it with
 Unite.
@@ -38,18 +64,36 @@ $ cd ~/dotfiles/vim/bundle/vimproc.vim
 $ make
 ```
 
-Unite `file_rec/async` function can be very slow. If you are using
-[ag](https://github.com/ggreer/the_silver_searcher), you can populate a
-`.agignore` file to enable the searcher to be faster. Please check
-[Inside's blog](http://insidesblog.blogspot.fr/2013/07/unitevim-and-many-files-in-project.html).
+### Install Ag
 
-After updating your .agignore, you have to clean Unite cache
+In order to use my `.vimrc` with Unite, you'll need to install `ag`.
 
-```sh
-rm -rf ~/.unite
+On macOS:
+```
+brew install the_silver_searcher
 ```
 
-## Setup Flow
+More information on: https://github.com/ggreer/the_silver_searcher.
 
-Checkout [vim-flow](https://github.com/flowtype/vim-flow#requirements)
-requirements.
+### Why using Ag?
+
+Unite `file_rec/async` function can be very slow. I configure Unite `unite_source_rec_async_command` so it uses `ag` to search
+through my files.
+
+The `ag` command ignores the files that are listed in `.gitignore` and `.ignore`
+files.
+
+Thanks to [Inside's blog](http://insidesblog.blogspot.fr/2013/07/unitevim-and-many-files-in-project.html) for this precious improvement.
+
+### Cache
+
+As my `.vimrc` command uses de `file_rec/async` function, it caches the result
+in Unite cache directory. When you update your `.gitignore` or `.ignore` files,
+sometimes you will have to clean Unite cache:
+
+```sh
+rm -rf ~/.cache/unite/file_rec
+```
+
+You can also clean the cache when you are focus on Unite buffer using the
+following command: `Ctrl` + `r`.
