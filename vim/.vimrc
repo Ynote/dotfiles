@@ -290,6 +290,11 @@ let b:syntastic_javascript_eslint_exec='node_modules/.bin/eslint'
 " let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_mode_map = {'passive_filetypes': ['html']}
 
+"""""""""""""""""""
+" CamelCaseMotion "
+"""""""""""""""""""
+call camelcasemotion#CreateMotionMappings('<leader>')
+
 """""""""""""""
 " autocommand "
 """""""""""""""
