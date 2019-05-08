@@ -221,8 +221,13 @@ syntax enable
 """""""""""""""
 let delimitMate_expand_cr = 1
 
+""""""""""""""""""
+" NERD Commenter "
+""""""""""""""""""
+let g:NERDSpaceDelims = 1
+
 """"""""""""
-" NERDTree "
+" NERD Tree "
 """"""""""""
 map <C-n> :NERDTreeToggle<CR>
 
