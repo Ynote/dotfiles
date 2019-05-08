@@ -191,7 +191,6 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('Raimondi/delimitMate')
   call dein#add('scrooloose/nerdcommenter')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('godlygeek/tabular')
   call dein#add('inside/vim-grep-operator')
   call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
   call dein#add('Shougo/deoplete.nvim')
@@ -227,14 +226,6 @@ let delimitMate_expand_cr = 1
 " NERDTree "
 """"""""""""
 map <C-n> :NERDTreeToggle<CR>
-
-""""""""""""""
-" Tabularize "
-""""""""""""""
-nmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:<CR>
-vmap <Leader>a: :Tabularize /:<CR>
 
 """""""""""""""""""""
 " vim-grep-operator "
