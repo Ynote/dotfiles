@@ -96,3 +96,24 @@ rm -rf ~/.cache/unite/file_rec
 
 You can also clean the cache when you are focus on Unite buffer using the
 following command: `Ctrl` + `r`.
+
+### Issue with Vim and Vimproc on MacOS Mojave
+
+If you install correctly Vimproc and Unite and you still have this error while
+using Unite in Vim:
+```
+vimproc plugin is not installed.
+```
+
+You probably have an issue with the Vim version you are using. As far as I
+understand it, the built-in version of Apple provided with Mojave is broken and
+use the `python/dyn` library instead of the `python3` library. Check it with
+`vim --version`.
+
+To fix it, install the brew version of Vim:
+```sh
+brew install vim
+```
+
+Brew should have create a symlink under the path `/usr/local/bin/vim`. Make sure
+`/usr/local/bin` is set in your PATH.
