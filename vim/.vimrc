@@ -187,7 +187,6 @@ if dein#load_state('~/.vim/bundles')
   call dein#begin('~/.vim/bundles')
 
   call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
   call dein#add('Raimondi/delimitMate')
   call dein#add('scrooloose/nerdcommenter')
   call dein#add('scrooloose/nerdtree')
