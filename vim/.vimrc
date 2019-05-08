@@ -174,41 +174,49 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " => Plugins configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""
-" Vundle "
-""""""""""
-filetype off                   " required!
+""""""""""""
+" dein.vim "
+""""""""""""
+if &compatible
+  set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if dein#load_state('~/.vim/bundles')
+  call dein#begin('~/.vim/bundles')
 
-" let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('Raimondi/delimitMate')
+  call dein#add('scrooloose/nerdcommenter')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('godlygeek/tabular')
+  call dein#add('inside/vim-grep-operator')
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/unite-outline')
+  call dein#add('bling/vim-airline')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('inside/vim-search-pulse')
+  call dein#add('bronson/vim-trailing-whitespace')
+  call dein#add('cakebaker/scss-syntax.vim')
+  call dein#add('othree/html5.vim')
+  call dein#add('vim-syntastic/syntastic')
+  call dein#add('bkad/CamelCaseMotion')
+  call dein#add('vim-scripts/CursorLineCurrentWindow')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
 
-" original repos on github
-Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'godlygeek/tabular'
-Plugin 'inside/vim-grep-operator'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/unite-outline'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'inside/vim-search-pulse'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'othree/html5.vim'
-Plugin 'kchmck/vim-coffee-script'
+  call dein#end()
+  call dein#save_state()
+endif
 
-" vim-scripts repos
-Plugin 'Syntastic'
-Plugin 'camelcasemotion'
-Plugin 'CursorLineCurrentWindow'
-
-call vundle#end()
-filetype plugin indent on    " required
+filetype plugin indent on
+syntax enable
 
 """""""""""""""
 " delimitMate "
