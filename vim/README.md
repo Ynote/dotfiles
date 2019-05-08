@@ -132,4 +132,5 @@ brew install vim
 ```
 
 Brew should have create a symlink under the path `/usr/local/bin/vim`. Make sure
-`/usr/local/bin` is set in your PATH.
+`/usr/local/bin` is set in your PATH to enable your machine to use the freshly
+installed version of Vim.
