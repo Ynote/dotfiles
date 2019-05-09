@@ -40,16 +40,32 @@ $ mkdir backup swap
 
 ## Plugins
 
-Use [Vundle](https://github.com/gmarik/Vundle.vim) to install bundles and
+Use [dein.vim](https://github.com/Shougo/dein.vim) to install bundles and
 plugins
 
+### Requirements
+- Vim 8.0 or above or NeoVim
+- "git" command in $PATH
+
+### Quick start
+
+Create a folder `~/.vim/bundles`:
 ```sh
-$  git clone https://github.com/gmarik/Vundle.vim.git ~/dotfiles/vim/bundle/Vundle.vim
+mkdir ~/.vim/bundles
 ```
 
-Launch `vim` and run `:VundleInstall!` to install plugins and bundles of the
-`.vimrc`.
+Install dein.vim:
+```sh
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
+installer.sh
 
+sh ./installer.sh ~/.vim/bundles
+```
+
+Open vim and install plugins listed in the `.vimrc`:
+```sh
+:call dein#install()
+```
 
 ## Unite plugin
 
@@ -59,7 +75,7 @@ If you just install Vimproc plugin, you will need to compile it to use it with
 Unite.
 
 ```sh
-$ cd ~/dotfiles/vim/bundle/vimproc.vim
+$ cd ~/dotfiles/vim/bundles/repos/github.com/Shougo/vimproc.vim
 $ make
 ```
 
@@ -96,3 +112,25 @@ rm -rf ~/.cache/unite/file_rec
 
 You can also clean the cache when you are focus on Unite buffer using the
 following command: `Ctrl` + `r`.
+
+### Issue with Vim and Vimproc on MacOS Mojave
+
+If you install correctly Vimproc and Unite and you still have this error while
+using Unite in Vim:
+```
+vimproc plugin is not installed.
+```
+
+You probably have an issue with the Vim version you are using. As far as I
+understand it, the built-in version of Apple provided with Mojave is broken and
+use the `python/dyn` library instead of the `python3` library. Check it with
+`vim --version`.
+
+To fix it, install the brew version of Vim:
+```sh
+brew install vim
+```
+
+Brew should have create a symlink under the path `/usr/local/bin/vim`. Make sure
+`/usr/local/bin` is set in your PATH to enable your machine to use the freshly
+installed version of Vim.

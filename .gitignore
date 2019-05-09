@@ -3,6 +3,7 @@ vim/backup
 vim/bundle
 vim/swap
 vim/.netrwhist
+vim/bundles
 
 # Bin
 bin/variables.sh
