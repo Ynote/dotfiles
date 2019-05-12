@@ -8,6 +8,16 @@ sudo apt-get update
 
 ## Table of contents
 
+- [Basics](#basics)
+  - [Development tools](#development-tools)
+  - [Git](#git)
+  - [Dotfiles](#dotfiles)
+  - [Language error with Bash](#language-error-with-bash)
+- [Web server](##web-server)
+- [Web development](#web-development)
+  - [Node](#node)
+  - [MySQL](#mysql)
+
 ## Basics
 
 ### Development tools
@@ -39,7 +49,7 @@ each READMEs:
 - [Vim](https://github.com/Ynote/dotfiles/tree/master/vim)
 - [Tmux](https://github.com/Ynote/dotfiles/tree/master/tmux)
 
-### Language error with bash
+### Language error with Bash
 
 If you encounter this error:
 ```sh
