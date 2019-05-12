@@ -47,8 +47,7 @@ repository](https://github.com/Ynote/dotfiles):
 git clone git@github.com:Ynote/dotfiles.git
 ```
 
-Follow the [setup](https://github.com/Ynote/dotfiles#setup) and then, follow
-each READMEs:
+Follow each READMEs:
 - [ZSH](https://github.com/Ynote/dotfiles/tree/master/zsh)
 - [Vim](https://github.com/Ynote/dotfiles/tree/master/vim)
 - [Tmux](https://github.com/Ynote/dotfiles/tree/master/tmux)
