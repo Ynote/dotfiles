@@ -13,6 +13,11 @@ echo $SHELL
 
 ## Custom setup
 
+Create a `.zshaliases` file in your home for all your aliases.
+
+Create a `.zshlocal` file in your home for all your local configuration
+(environment variables, custom triggers, etc.).
+
 Create a symlink .oh-my-zsh/custom -> dotfiles/zsh/.oh-my-zsh/custom
 ```
 $ ln -s ~/dotfiles/zsh/.oh-my-zsh/custom ~/.oh-my-zsh/custom
@@ -24,3 +29,4 @@ $ ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ```
 
 *(You may need to remove `.oh-my-zsh/custom` and `.zshrc` before creating the symlinks)*
+

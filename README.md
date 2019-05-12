@@ -1,16 +1,19 @@
 # Dotfiles
 
-This is my personal setup.
+This is my personal setup for tools that I use every day on my machine.
 
-## Prerequisites
+## Basics
 
-* [Vim](http://www.vim.org/download.php) (v7.4.7 or more recent)
-* [Zsh](http://www.zsh.org/) (v4.3.9 or more recent)
+- [Current machine
+  setup](https://github.com/Ynote/dotfiles/blob/master/docs/totoro-debian-9-setup.md)
+- [Vim](https://github.com/Ynote/dotfiles/tree/master/vim)
+- [Zsh](https://github.com/Ynote/dotfiles/tree/master/zsh)
+- [Tmux](https://github.com/Ynote/dotfiles/tree/master/tmux)
+
+## If you want more...
+
+You can install the following packages and check the matching directory in this
+repository:
 * [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
-* [Tmux](http://doc.ubuntu-fr.org/tmux)
-
-## Setup
-
-- Create a `.zshaliases` file in your home for all your aliases.
-- Create a `.zshlocal` file in your home for all your local configuration
-  (environment variables, custom triggers, etc.).
+* [Irssi](https://irssi.org/download/)
+* [Tmuxinator](https://github.com/tmuxinator/tmuxinator)

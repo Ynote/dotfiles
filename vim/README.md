@@ -1,5 +1,6 @@
 ## Table of contents
 
+- [Prerequisittes](#prerequisites)
 - [Setup](#setup)
 - [Plugins](#plugins)
   - [Requirements](#requirements)
@@ -14,6 +15,11 @@
 - [Custom cheat sheet](#custom-cheat-sheet)
   - [Commands](#commands)
   - [Understanding `.vimrc`](#understanding-vimrc)
+
+## Prerequisites
+
+By default, vim is often installed with a Linux distribution. If not, this setup
+is targeted [Vim](http://www.vim.org/download.php) (v7.4.7 or more recent).
 
 ## Setup
 
