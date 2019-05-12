@@ -1,3 +1,9 @@
+## Install
+
+```sh
+sudo apt-get install tmux
+```
+
 ## Aliases
 
 Some aliases are set with Zsh for tmux:
