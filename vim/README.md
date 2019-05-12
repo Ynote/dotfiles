@@ -1,3 +1,20 @@
+## Table of contents
+
+- [Setup](#setup)
+- [Plugins](#plugins)
+  - [Requirements](#requirements)
+  - [Quick start](#quick-start)
+- [Unite plugin](#unite-plugin)
+  - [Compile Vimproc](#compile-vimproc)
+  - [Install Ag](#install-ag)
+  - [Why using Ag?](#why-using-ag)
+  - [Cache](#cache)
+  - [Issue with Vim and Vimproc on MacOS
+    Mojave](#issue-with-vim-and-vimproc-on-macos-mojave)
+- [Custom cheat sheet](#custom-cheat-sheet)
+  - [Commands](#commands)
+  - [Understanding `.vimrc`](#understanding-vimrc)
+
 ## Setup
 
 Create a symlink .vim -> dotfiles/vim
@@ -16,32 +33,10 @@ $ cd ~/dotfiles/vim
 $ mkdir backup swap
 ```
 
-## Custom cheat sheet
-
-### Commands
-
-| Commands | Description |
-|----------|-------------|
-| `Ctrl` + `n` | Open the current directory tree |
-| `,` + `a` + `=` | Align all the `=` character in the selection |
-| `,` + `a` + `:` | Align all the `,` character in the selection |
-| `,` + `g` + `space` | Grep the selection and opens a pane with the grep result |
-| `,` + `f` | Search a file by name in the current directory |
-
-### Understanding `.vimrc`
-
-- `<C-n>` means to use the key `Ctrl` and then, the key `n`
-- `<Leader>` means to use `,`.
-- `let g:foo = 'bar'` means setting `bar` to `foo` as a global variable.
-- `map` is used to map a key in general.
-- `nmap` is used to map a key in normal mode.
-- `imap` is used to map a key in insert mode.
-- `vmap` is used to map a key in visual mode.
-
 ## Plugins
 
 Use [dein.vim](https://github.com/Shougo/dein.vim) to install bundles and
-plugins
+plugins.
 
 ### Requirements
 - Vim 8.0 or above or NeoVim
@@ -134,3 +129,25 @@ brew install vim
 Brew should have create a symlink under the path `/usr/local/bin/vim`. Make sure
 `/usr/local/bin` is set in your PATH to enable your machine to use the freshly
 installed version of Vim.
+
+## Custom cheat sheet
+
+### Commands
+
+| Commands | Description |
+|----------|-------------|
+| `Ctrl` + `n` | Open the current directory tree |
+| `,` + `a` + `=` | Align all the `=` character in the selection |
+| `,` + `a` + `:` | Align all the `,` character in the selection |
+| `,` + `g` + `space` | Grep the selection and opens a pane with the grep result |
+| `,` + `f` | Search a file by name in the current directory |
+
+### Understanding `.vimrc`
+
+- `<C-n>` means to use the key `Ctrl` and then, the key `n`
+- `<Leader>` means to use `,`.
+- `let g:foo = 'bar'` means setting `bar` to `foo` as a global variable.
+- `map` is used to map a key in general.
+- `nmap` is used to map a key in normal mode.
+- `imap` is used to map a key in insert mode.
+- `vmap` is used to map a key in visual mode.
