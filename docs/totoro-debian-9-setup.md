@@ -1,7 +1,7 @@
-# Setup on Debian 9
+# Setup on Debian 9 for totoro.ynote.hk
 
 This setup is for my personnal VM on Gandi. I use it to serve some websites,
-along with my [profile page](http://ynote.hk/) and to host personnal projects
+along with my [profile page](http://ynote.hk/), and to host personnal projects
 under a private sub-domain.
 
 Before installing, make sure to update APT available packages list:
