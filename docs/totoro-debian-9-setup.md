@@ -1,4 +1,4 @@
-# Setup on Debian 9 for totoro.ynote.hk
+# Debian 9 setup on totoro.ynote.hk
 
 This setup is for my personnal VM on Gandi. I use it to serve some websites,
 along with my [profile page](http://ynote.hk/), and to host personnal projects
