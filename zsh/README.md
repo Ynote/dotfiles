@@ -6,6 +6,11 @@ sudo apt install zsh
 sudo chsh -s $(which zsh)
 ```
 
+Log out and login back again to use your new default shell. Try:
+```sh
+echo $SHELL
+```
+
 ## Custom setup
 
 Create a symlink .oh-my-zsh/custom -> dotfiles/zsh/.oh-my-zsh/custom
