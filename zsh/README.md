@@ -1,14 +1,12 @@
-## Setup
+## Install
 
-After Zsh installation, change the login shell.
-
-```
-$ chsh
-Enter the new value, or press return for the default
-    Login Shell [/bin/bash]:/bin/zsh
+Install ZSH and make it the default shell :
+```sh
+sudo apt install zsh
+sudo chsh -s $(which zsh)
 ```
 
-*(You may need to remove `.oh-my-zsh/custom` and `.zshrc` before creating the symlinks)*
+## Custom setup
 
 Create a symlink .oh-my-zsh/custom -> dotfiles/zsh/.oh-my-zsh/custom
 ```
@@ -19,3 +17,5 @@ Create a symlink .zshrc -> dotfiles/zsh/.zshrc
 ```
 $ ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ```
+
+*(You may need to remove `.oh-my-zsh/custom` and `.zshrc` before creating the symlinks)*
