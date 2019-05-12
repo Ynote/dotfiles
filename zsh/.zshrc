@@ -22,7 +22,6 @@ plugins=(
   brew
   nvm
   git
-  colored-man
   colorize
   node
   npm
@@ -33,7 +32,6 @@ plugins=(
   tmux
   last-working-dir
   common-aliases
-  zsh-syntax-highlighting
   history-substring-search
 )
 
