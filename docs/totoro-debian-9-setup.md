@@ -87,7 +87,7 @@ set -g update-environment -r
 setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
 ```
 
-Resource: https://werat.github.io/2017/02/04/tmux-ssh-agent-forwarding.html
+Resource: https://gist.github.com/martijnvermaat/8070533
 
 ## Web server
 
