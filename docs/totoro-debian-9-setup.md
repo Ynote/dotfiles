@@ -70,7 +70,7 @@ sudo locale-gen
 
 ### SSH agent forwarding for Tmux
 
-Create `~/.ssh/rc` and add the following content: 
+Create `~/.ssh/rc` and add the following content:
 ```sh
 #!/bin/bash
 
@@ -80,9 +80,10 @@ if test "$SSH_AUTH_SOCK" ; then
 fi
 ```
 
-Check that your `tmux.conf` contains the following lines: 
+Check that your `tmux.conf` contains the following lines:
 ```sh
 # Fix ssh agent when tmux is detached
+set -g update-environment -r
 setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
 ```
 
