@@ -17,6 +17,7 @@ sudo apt-get update
   - [Git](#git)
   - [Dotfiles](#dotfiles)
   - [Language error with Bash](#language-error-with-bash)
+  - [SSH agent forwarding for Tmux](#ssh-agent-forwarding-for-tmux)
 - [Web server](##web-server)
 - [Web development](#web-development)
   - [Node](#node)
@@ -66,6 +67,26 @@ Then, generate the locales again:
 ```sh
 sudo locale-gen
 ```
+
+### SSH agent forwarding for Tmux
+
+Create `~/.ssh/rc` and add the following content: 
+```sh
+#!/bin/bash
+
+# Fix SSH auth socket location so agent forwarding works with tmux
+if test "$SSH_AUTH_SOCK" ; then
+  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+fi
+```
+
+Check that your `tmux.conf` contains the following lines: 
+```sh
+# Fix ssh agent when tmux is detached
+setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
+```
+
+Resource: https://werat.github.io/2017/02/04/tmux-ssh-agent-forwarding.html
 
 ## Web server
 
