@@ -22,6 +22,7 @@ sudo apt-get update
 - [Web development](#web-development)
   - [Node](#node)
   - [MySQL](#mysql)
+  - [Redis](#redis)
 
 ## Basics
 
@@ -182,4 +183,19 @@ Uptime:                 16 hours 36 min 9 sec
 
 Threads: 2  Questions: 11  Slow queries: 0  Opens: 144  Flush tables: 3  Open
 tables: 48  Queries per second avg: 0.000
+```
+
+### Redis
+
+Install Redis following the [official documentation](https://redis.io/download)
+in the `~/src` folder.
+
+Start Redis as a background process:
+```sh
+src/redis-5.0.5/src/redis-server &
+```
+
+Check Redis is running:
+```sh
+ps -ef | grep redis
 ```
