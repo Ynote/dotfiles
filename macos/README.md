@@ -49,8 +49,6 @@ brew install amazon-ecs-cli
 
 # Services
 brew cask install docker
-brew install redis && brew services start redis
-brew install postgresql && brew services start postgresql
 
 # Useful to open/close services (postgre, redis, elasticsearch, …)
 # installed with Brew in the System Preferences
