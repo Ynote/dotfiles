@@ -4,6 +4,7 @@ vim/bundle
 vim/swap
 vim/.netrwhist
 vim/bundles
+vim/installer.sh
 
 # Bin
 bin/variables.sh
