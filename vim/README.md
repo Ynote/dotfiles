@@ -63,7 +63,14 @@ installer.sh
 sh ./installer.sh ~/.vim/bundles
 ```
 
-Open vim and install plugins listed in the `.vimrc`:
+Open vim and install `vimproc` with its build directly:
+```sh
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+```
+
+(cf. https://github.com/Shougo/vimproc.vim#deinvim)
+
+Then, install plugins listed in the `.vimrc`:
 ```sh
 :call dein#install()
 ```
