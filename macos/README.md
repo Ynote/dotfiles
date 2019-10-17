@@ -34,6 +34,12 @@ brew cask install firefox
 brew install optipng
 brew install jpegoptim
 brew install svgo
+
+# Chat
+brew cask install slack
+
+# Better alternative to Spotlight
+brew cask install alfred
 ```
 
 ## Web development
