@@ -40,6 +40,12 @@ brew cask install slack
 
 # Better alternative to Spotlight
 brew cask install alfred
+
+# Notes
+brew cask install evernote
+
+# Terminal manager
+brew install tmuxinator
 ```
 
 ## Web development
