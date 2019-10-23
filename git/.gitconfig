@@ -35,5 +35,6 @@
 
 [merge]
   summary = true
+
 [push]
-	default = matching
+  default = simple
