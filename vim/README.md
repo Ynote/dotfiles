@@ -63,7 +63,14 @@ installer.sh
 sh ./installer.sh ~/.vim/bundles
 ```
 
-Open vim and install plugins listed in the `.vimrc`:
+Open vim and install `vimproc` with its build directly:
+```sh
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+```
+
+(cf. https://github.com/Shougo/vimproc.vim#deinvim)
+
+Then, install plugins listed in the `.vimrc`:
 ```sh
 :call dein#install()
 ```
@@ -103,16 +110,15 @@ Thanks to [Inside's blog](http://insidesblog.blogspot.fr/2013/07/unitevim-and-ma
 
 ### Cache
 
-As my `.vimrc` command uses de `file_rec/async` function, it caches the result
-in Unite cache directory. When you update your `.gitignore` or `.ignore` files,
-sometimes you will have to clean Unite cache:
+1. You can clean the cache when you are focus on the Unite buffer with `<c-l>` (`Ctrl` + `l`).
 
-```sh
-rm -rf ~/.cache/unite/file_rec
-```
+2. As my `.vimrc` command uses de `file_rec/async` function, it caches the result
+   in Unite cache directory. When you update your `.gitignore` or `.ignore` files,
+   sometimes you will have to clean Unite cache the hard way:
 
-You can also clean the cache when you are focus on Unite buffer using the
-following command: `Ctrl` + `r`.
+   ```sh
+   rm -rf ~/.cache/unite/file_rec
+   ```
 
 ### Issue with Vim and Vimproc on MacOS Mojave
 
