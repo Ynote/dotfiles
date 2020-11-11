@@ -1,3 +1,5 @@
+> This project has moved to https://gitlab.com/ynote_hk/dotfiles.
+
 # Dotfiles
 
 This is my personal setup for tools that I use every day on my machine.
